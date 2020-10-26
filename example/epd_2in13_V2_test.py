@@ -11,7 +11,6 @@ import logging
 from lib import epd2in13_V2
 import time
 from PIL import Image,ImageDraw,ImageFont
-import traceback
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -93,5 +92,5 @@ except IOError as e:
     
 except KeyboardInterrupt:    
     logging.info("ctrl + c:")
-    epd2in13_V2.epdconfig.module_exit()
+    src.lib.epdconfig.module_exit()
     exit()
