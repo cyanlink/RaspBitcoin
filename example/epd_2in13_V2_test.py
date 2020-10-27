@@ -8,7 +8,7 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from lib import epd2in13_V2
+from rblib import epd2in13_V2
 import time
 from PIL import Image,ImageDraw,ImageFont
 
