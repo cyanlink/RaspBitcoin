@@ -3,8 +3,7 @@ import asyncio
 import json
 from .rblib import rbimage
 
-uri = "wss://ws.blockchain.info/inv"
-
+ws_uri = "wss://ws.blockchain.info/inv"
 
 # determine if this addr is already used, and return a unused one
 async def get_unused_address():
@@ -21,7 +20,7 @@ async def unsubscribe_addr():
 
 
 async def polling():
-    async with websockets.connect(uri) as websocket:
+    async with websockets.connect(ws_uri) as websocket:
         while True:
             tx = input()
             await websocket.send()
