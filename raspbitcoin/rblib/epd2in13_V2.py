@@ -219,7 +219,7 @@ class EPD:
             linewidth = int(self.width/8) + 1
          
         buf = [0xFF] * (linewidth * self.height)
-        image = image.transpose(Image.ROTATE_180) # set by developer to match pi-sugar's orientation
+        image = image.transpose(Image.ROTATE_180)  # to match pi-sugar's orientation, hacked the lib here
         image_monocolor = image.convert('1')
         imwidth, imheight = image_monocolor.size
         pixels = image_monocolor.load()
